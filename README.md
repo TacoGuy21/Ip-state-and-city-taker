@@ -7,7 +7,7 @@ This project is intended to teach you about the dangers of ip loggers, and how e
 
 # You can disguise this url with these links:
 
-https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiF9-PMxZr-AhWvFFkFHV8YAm4QFnoECB0QAQ&url=https%3A%2F%2Ftinyurl.com%2F&usg=AOvVaw1f9aEAvCZOU61W2fDmlmj-
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiF9-PMxZr-AhWvFFkFHV8YAm4QFnoECB0QAQ&url=https%3A%2F%2Ftinyurl.com%2F&usg=AOvVaw1f9aEAvCZOU61W2fDmlmj- (Recommended)
 
 https://www.shorturl.at
 
