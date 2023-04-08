@@ -1,22 +1,99 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>IP Location</title>
+    
+  <body>
+    <h1>Your City</h1>
+    <p id="city">Loading...</p>
+
+    <script>
+      const cityElement = document.getElementById("city");
+
+      // Make API request to retrieve user's IP address
+      fetch("https://api.ipify.org?format=json")
+        .then(response => response.json())
+        .then(data => {
+          const ipAddress = data.ip;
+          const apiURL = `https://ipapi.co/${ipAddress}/json/`;
+
+          // Make API request to retrieve user's city from IP address
+          fetch(apiURL)
+            .then(response => response.json())
+            .then(data => {
+              const city = data.city;
+              cityElement.textContent = city;
+            })
+            .catch(error => {
+              console.error(error);
+              cityElement.textContent = "Error: Could not retrieve city.";
+            });
+        })
+        .catch(error => {
+          console.error(error);
+          cityElement.textContent = "Error: Could not retrieve IP address.";
+        });
+    </script>
+  </body>
+    <body>
+      <h1>Your State:</h1>
+    <p id="state">Loading...</p>
+
+    <script>
+      const stateElement = document.getElementById("state");
+      fetch("https://api.ipify.org?format=json")
+        .then(response => response.json())
+        .then(data => {
+          const ipAddress = data.ip;
+          const apiURL = `https://ipapi.co/${ipAddress}/json/`;
+          fetch(apiURL)
+            .then(response => response.json())
+            .then(data => {
+              const state = data.region;
+              stateElement.textContent = state;
+            })
+            .catch(error => {
+              console.error(error);
+              stateElement.textContent = "Error: Could not retrieve state.";
+            });
+        })
+        .catch(error => {
+          console.error(error);
+          stateElement.textContent = "Error: Could not retrieve IP address.";
+        });
+    </script>
+</body>
+    <meta charset="UTF-8">
+    <title>Cool website</title>
+    <style>
+      body {
+        background-color: #;
+        color: #990011FF;
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        text-align: center;
+        padding-top: 50px;
+      }
+    </style>
   </head>
   <body>
-    <h1>Your Location</h1>
-    <p>Country: <span id="country"></span></p>
-    <p>State: <span id="region"></span></p>
-    <p>City: <span id="city"></span></p>
-    <p>IP Address: <span id="ip"></span></p>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <h1>Your ip:</h1>
+    <p id="ip"></p>
+    
+      <a style="color: #fff;" href="https://github.com/3kh0/echolog" target="_blank"></a></p>
     <script>
-      $.get("https://ipapi.co/json/", function(response) {
-        $("#country").text(response.country_name);
-        $("#region").text(response.region);
-        $("#city").text(response.city);
-        $("#ip").text(response.ip);
-      }, "jsonp");
+      let echolog = {};
+      fetch("https://wtfismyip.com/json")
+        .then((response) => response.json())
+        .then((data) => {
+          let echolog = {
+            ipAddress: data.YourFuckingIPAddress,
+          };
+
+          var ip = document.getElementById("ip")
+          ip.innerText = echolog.ipAddress
+        })
+        .catch((error) => console.error(error));
     </script>
   </body>
 </html>
+
