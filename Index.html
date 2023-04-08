@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IP Location</title>
+  </head>
+  <body>
+    <h1>Your Location</h1>
+    <p>Country: <span id="country"></span></p>
+    <p>State: <span id="region"></span></p>
+    <p>City: <span id="city"></span></p>
+    <p>IP Address: <span id="ip"></span></p>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $.get("https://ipapi.co/json/", function(response) {
+        $("#country").text(response.country_name);
+        $("#region").text(response.region);
+        $("#city").text(response.city);
+        $("#ip").text(response.ip);
+      }, "jsonp");
+    </script>
+  </body>
+</html>
