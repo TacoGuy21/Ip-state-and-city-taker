@@ -8,15 +8,11 @@
 
     <script>
       const cityElement = document.getElementById("city");
-
-      // Make API request to retrieve user's IP address
       fetch("https://api.ipify.org?format=json")
         .then(response => response.json())
         .then(data => {
           const ipAddress = data.ip;
           const apiURL = `https://ipapi.co/${ipAddress}/json/`;
-
-          // Make API request to retrieve user's city from IP address
           fetch(apiURL)
             .then(response => response.json())
             .then(data => {
