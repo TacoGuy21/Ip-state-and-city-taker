@@ -13,3 +13,7 @@ https://tinyurl.com/app
 https://www.shorturl.at
 
 (Not recommended)
+
+# Recommended steps
+
+I highly recommend using another database to store the website user's info.
