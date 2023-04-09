@@ -3,7 +3,7 @@ Fetches the user's ip, state, and city using Ipapi.co.
 ## Don't use this for doxxing!
 Doxxing is a highly illegal activity, I do not endorse it.
 
-This project is intended to teach you about the dangers of ip loggers, and how easy it is to make one.
+This project is made for gathering data of people who visit your website. 
 
 # Url:
 https://ip-puller1.netlify.app
